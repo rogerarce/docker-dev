@@ -2,7 +2,7 @@ FROM ubuntu:16.04
 MAINTAINER Sean Roger <arceseanroger@gmail.com>
 
 # Install apache, PHP, and supplimentary programs. curl, and lynx-cur are for debugging the container.
-RUN sudo apt-get -y install software-properties-common
+RUN sudo apt-get install -y software-properties-common
 RUN sudo add-apt-repository ppa:ondrej/php
 RUN apt-get update && apt-get -y upgrade && DEBIAN_FRONTEND=noninteractive
 RUN apt-get -y install vim apache2 php7.1 libapache2-mod-php7.1 php7.1-mcrypt php7.1-curl php7.1-cli php7.1-common php7.1-json php7.1-mysql php7.1-readline php7.1-mbstring php-xml php-zip curl lynx-cur
